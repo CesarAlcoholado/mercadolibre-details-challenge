@@ -4,7 +4,7 @@ import {Link, Text} from "@chakra-ui/react";
 const HomeScreen: React.FC = () => {
   return (
     <div>
-      <Text>{`<HomeScreen />`}</Text>
+      <Text>{`<HomeScreen Test/>`}</Text>
       <br />
       <Link href="/productId">Ver página de detalle de producto</Link>
     </div>
