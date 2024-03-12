@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-undef */
 import React, {useState} from "react";
-import {Box, Container, Divider, Grid, HStack, Link, Stack, Text} from "@chakra-ui/layout";
+import {Box, Container, Divider, Grid, Link, Stack, Text} from "@chakra-ui/layout";
 import {Image} from "@chakra-ui/image";
 import Icon from "@chakra-ui/icon";
 import {Input} from "@chakra-ui/input";
@@ -10,7 +10,6 @@ import {IoMdAlert} from "react-icons/io";
 import {FiCheckCircle} from "react-icons/fi";
 import {AiOutlineTag} from "react-icons/ai";
 import {BsChevronDown} from "react-icons/bs";
-import {grid, OutlineProps, ResponsiveValue} from "@chakra-ui/styled-system";
 import ReactImageMagnify from "react-image-magnify";
 
 import medal from "../../assets/medal.svg";
@@ -35,9 +34,9 @@ interface Props {
 const DetailsScreen: React.FC<Props> = ({product = mock.product}) => {
   const [active, setActive] = useState(squirtle_one);
 
-  const lens = () => (
-    <div id="lente" style={{width: "450px", height: "450px", backgroundColor: "blue"}} />
-  );
+  // const lens = () => (
+  //   <div id="lente" style={{width: "450px", height: "450px", backgroundColor: "blue"}} />
+  // );
 
   return (
     <>
@@ -54,12 +53,22 @@ const DetailsScreen: React.FC<Props> = ({product = mock.product}) => {
         <Icon as={IoMdAlert} color="tomato" height="5" width="5" />
         <Text>Publicacion pausada</Text>
       </Stack>
-      <Link width="100%" margin="0">
-        <Text as="span" mx="1" fontSize="sm" color="blackAlpha.900">Volver al listado</Text>
-        <Text as="span" color="blackAlpha.600" mx="1" fontSize="sm">|</Text>
-        <Text as="span" mx="1" fontSize="sm">Juegos y Juguetes</Text>
-        <Text as="span" color="blackAlpha.600" mx="1" fontSize="sm">></Text>
-        <Text as="span" mx="1" fontSize="sm">Peluches</Text>
+      <Link margin="0" width="100%">
+        <Text as="span" color="blackAlpha.900" fontSize="sm" mx="1">
+          Volver al listado
+        </Text>
+        <Text as="span" color="blackAlpha.600" fontSize="sm" mx="1">
+          |
+        </Text>
+        <Text as="span" fontSize="sm" mx="1">
+          Juegos y Juguetes
+        </Text>
+        <Text as="span" color="blackAlpha.600" fontSize="sm" mx="1">
+          {">"}
+        </Text>
+        <Text as="span" fontSize="sm" mx="1">
+          Peluches
+        </Text>
       </Link>
       <Container backgroundColor="#FFFFFF" maxWidth="container.xl" my="4" padding="4">
         <Stack direction="row">
