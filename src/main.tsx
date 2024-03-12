@@ -1,17 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {BrowserRouter} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {ChakraProvider, ColorModeScript} from "@chakra-ui/react";
 
-import App from "./app";
 import theme from "./theme";
+import HomeScreen from "./app/screens/Home";
+import DetailsScreen from "./product/screens/Details";
+import mock from "./product/mock";
 
 ReactDOM.render(
   <>
     <ColorModeScript initialColorMode={theme.config.initialColorMode} />
     <BrowserRouter>
       <ChakraProvider theme={theme}>
-        <App />
+        <Routes>
+          <Route element={<HomeScreen />} path="/" />
+          <Route element={<DetailsScreen product={mock.product} />} path="/productId" />
+        </Routes>
       </ChakraProvider>
     </BrowserRouter>
   </>,

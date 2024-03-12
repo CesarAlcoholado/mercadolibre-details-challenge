@@ -1,17 +1,20 @@
 import React from "react";
-import {Switch, Route, Redirect} from "react-router-dom";
+import {Route} from "react-router-dom";
 
 import DetailsScreen from "../product/screens/Details";
+import mock from "../product/mock";
 
 import HomeScreen from "./screens/Home";
 
+import App from ".";
+
 const Routes: React.FC = () => {
   return (
-    <Switch>
-      <Route exact component={HomeScreen} path="/" />
-      <Route component={DetailsScreen} path="/productId" />
-      <Redirect to="/" />
-    </Switch>
+    <Routes>
+      <App />
+      <Route element={<HomeScreen />} path="/" />
+      <Route element={<DetailsScreen product={mock.product} />} path="/productId" />
+    </Routes>
   );
 };
 

@@ -7,8 +7,6 @@ import {CgShoppingCart} from "react-icons/cg";
 import Logo from "../assets/mercadoLibre.webp";
 import Suscription from "../assets/suscription.webp";
 
-import Routes from "./routes";
-
 const App: React.FC = () => {
   return (
     <Stack>
@@ -71,9 +69,6 @@ const App: React.FC = () => {
           </Stack>
         </Container>
       </Box>
-      <Container alignSelf="center" maxWidth="container.xl" paddingX={0}>
-        <Routes />
-      </Container>
     </Stack>
   );
 };
