@@ -3,7 +3,5 @@ from = "/*"
 to = "/index.html"
 status = 200
 
-
-[build]
-[build.processing]
+[[build.processing]]
 skip_processing = true
