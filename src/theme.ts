@@ -6,7 +6,6 @@ export default extendTheme({
       body: {
         color: "blackAlpha.900",
         backgroundColor: "#EDEDED",
-        fontFamily: "Proxima Nova",
       },
     },
   },
