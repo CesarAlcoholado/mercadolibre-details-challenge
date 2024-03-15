@@ -38,8 +38,8 @@ export default extendTheme({
     },
   },
   fonts: {
-    body: "Proxima Nova",
-    heading: "Proxima Nova",
+    body: "Proxima Nova condensed",
+    heading: "Proxima Nova condensed",
   },
   components: {
     Link: {
